@@ -13,7 +13,7 @@ compile_binutils ()
    rm -rf "$BINUTILS_SRC".obj &&
    mkdir -p "$BINUTILS_SRC".obj &&
    cd "$BINUTILS_SRC".obj &&
-   AR="$HOST_MACHINE-ar" AS="$HOST_MACHINE-as" \
+   AR="$HOST_MACHINE-gcc-ar" AS="$HOST_MACHINE-as" \
    ../$BINUTILS_SRC/configure \
       --host="$HOST" \
       --target="$TARGET" \

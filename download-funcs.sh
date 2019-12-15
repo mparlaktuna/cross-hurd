@@ -69,16 +69,16 @@ download_glibc () {
    git clone https://git.savannah.gnu.org/git/hurd/glibc.git &&
    cd glibc &&
    git checkout origin/tschwinge/Roger_Whittaker &&
-   git clone https://git.savannah.gnu.org/git/hurd/libpthread.git &&
-   cd libpthread &&
-   (for p in $SCRIPT_DIR/patches/libpthread/*; do
-      apply_patch $p 0
-   done) &&
-   cd .. &&
-   (for p in $SCRIPT_DIR/patches/glibc/*; do
-      apply_patch $p 1
-   done) &&
-   cd ..
+   git clone https://git.savannah.gnu.org/git/hurd/libpthread.git 
+   # cd libpthread &&
+   # (for p in $SCRIPT_DIR/patches/libpthread/*; do
+   #    apply_patch $p 0
+   # done) &&
+   # cd .. &&
+   # (for p in $SCRIPT_DIR/patches/glibc/*; do
+   #    apply_patch $p 1
+   # done) &&
+   # cd ..
 }
 
 unpack_gcc () {
